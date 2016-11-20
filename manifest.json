@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
+  "name": "4senal",
+  "description": "This extension changes all instances of Arsenal to 4senal",
   "version": "1.0",
 
   "browser_action": {

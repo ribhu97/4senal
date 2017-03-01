@@ -6,7 +6,10 @@
  -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="font.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+    <title>4senal</title>
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
@@ -19,6 +22,41 @@
         overflow: hidden;
         max-width: 400px;
       }
+
+      .btn{
+        padding: 10px 15px;
+        background: #d4001f;
+        color: #FFF;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      .head-title{
+        font-family:'Diploma Regular';
+        font-weight:normal;
+        font-size:50px;
+        text-align: center;
+        color: #fc0405;
+      }
+
+      .head-sub{
+        text-align: center;
+        font-family: 'Nova Mono', monospace;
+      }
+
+      .wrapper{
+        text-align: center;
+        position: relative;
+      }
+
+      .footer{
+        position: absolute;
+        bottom: 5px;
+        text-align: center;
+        width: 100%;
+      }
     </style>
 
     <!--
@@ -30,8 +68,12 @@
     <script src="popup.js"></script>
   </head>
   <body>
+    <div class = "head-title">4senal</div>
+    <div class = "head-sub">Go ahead and improve your browsing experience</div><br>
     <div id="status"></div>
+    <div class="wrapper"><button class="btn" id="act_btn">Activate</button></div>
     <img id="image-result" hidden>
+    <div class="footer">©Developed by Ribhu Lahiri (4 the bantz)</div>
   </body>
 </html>
 

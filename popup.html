@@ -10,17 +10,18 @@
     <link rel="stylesheet" type="text/css" href="font.css"/>
     <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
     <title>4senal</title>
+    
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
         font-size: 100%;
+        min-height: 300px;
+        min-width: 300px;
       }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
+
+      .myhead{
+        border-radius: 25px;
+        border: 2px solid #fc0405;
       }
 
       .btn{
@@ -53,27 +54,21 @@
 
       .footer{
         position: absolute;
-        bottom: 5px;
+        bottom: 10px;
         text-align: center;
         width: 100%;
-        font-size: 12px;
+        font-size: 10px;
       }
     </style>
-
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
     <script src="popup.js"></script>
   </head>
-  <body>
-    <div class = "head-title">4senal</div>
-    <div class = "head-sub">Go ahead and improve your browsing experience</div><br>
-    <div id="status"></div>
-    <div class="wrapper"><button class="btn" id="act_btn">Activate</button></div>
-    <div class="footer">©Developed by Ribhu Lahiri (4 the bantz)</div>
+
+  <body class="myhead">
+      <div class = "head-title">4senal</div>
+      <div class = "head-sub">Go ahead and improve your browsing experience</div><br>
+      <div class="wrapper"><button class="btn" id="act_btn">Activate</button></div>
+      <div class="footer">©Developed by Ribhu Lahiri (4 the bantz)</div>
   </body>
+
 </html>
 

@@ -49,6 +49,14 @@ function getCurrentTabUrl(callback) {
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
 }
 
+chrome.browserAction.onClicked.addListener(function(tab) {
+  // No tabs or host permissions needed!
+  console.log('Turning ' + tab.url + ' red!');
+  chrome.tabs.executeScript({
+    code: 'document.body.style.backgroundColor="red"'
+  });
+});
+
 /**
  * @param {string} searchTerm - Search term for Google Image search.
  * @param {function(string,number,number)} callback - Called when an image has

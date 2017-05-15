@@ -1,7 +1,7 @@
 # 4senal
 Chrome extension that changes Arsenal to 4senal on the web.
 
-##Current State
+## Current State
 Currently following the django polls application, since I decided to give Django a go (Sorry. Not.)
 Functionality is non-existent, only the UI of the extension is available to view right now.
 

@@ -6,10 +6,7 @@ from django.urls import reverse
 
 from .models import Question
 
-
-class QuestionMethodTests(TestCase):
-
-   def create_question(question_text, days):
+def create_question(question_text, days):
     	"""
     	Creates a question with the given `question_text` and published the
     	given number of `days` offset to now (negative for questions published
@@ -17,6 +14,8 @@ class QuestionMethodTests(TestCase):
     	"""
     	time = timezone.now() + datetime.timedelta(days=days)
     	return Question.objects.create(question_text=question_text, pub_date=time)
+
+class QuestionMethodTests(TestCase):
 
     def test_was_published_recently_with_future_question(self):
         """
@@ -122,3 +121,5 @@ class QuestionIndexDetailTests(TestCase):
         url = reverse('polls:detail', args=(past_question.id,))
         response = self.client.get(url)
         self.assertContains(response, past_question.question_text)
+
+# Add tests for results view

@@ -3,7 +3,7 @@
 
   "name": "4senal",
   "description": "This extension changes all instances of Arsenal to 4senal",
-  "version": "1.0",
+  "version": "1.0.1",
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -13,5 +13,17 @@
     "activeTab",
     "https://ajax.googleapis.com/",
     "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at":"document_end"
+    }
   ]
 }

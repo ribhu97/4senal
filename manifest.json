@@ -1,9 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "4senal",
-  "description": "This extension changes all instances of Arsenal to 4senal",
+  "name": "Osmote",
+  "description": "This extension changes all words or phrases on the web into whatever the user wants",
   "version": "1.0.1",
+  "background": {
+  "scripts": ["content-1.js"],
+  "persistent": false
+  },
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -13,17 +17,5 @@
     "activeTab",
     "https://ajax.googleapis.com/",
     "tabs"
-  ],
-  "content_scripts": [
-    {
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "js": [
-        "content.js"
-      ],
-      "run_at":"document_end"
-    }
   ]
 }

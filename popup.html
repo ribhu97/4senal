@@ -8,8 +8,8 @@
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" type="text/css" href="font.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Abril+Fatface" rel="stylesheet">
-    <title>4senal</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Prata" rel="stylesheet">
+    <title>Osmote</title>
 
     <style>
       body {
@@ -20,14 +20,12 @@
       }
 
       .myhead{
-        border-radius: 25px;
-        border: 2px solid #fc0405;
+        /**border-radius: 25px;
+        border: 2px solid #10A1D8;**/
       }
 
       .btn{
         padding: 10px 15px;
-        background: #d4001f;
-        color: #FFF;
         -webkit-user-select:none;
         -moz-user-select:none;
         -ms-user-select:none;
@@ -35,17 +33,35 @@
       }
 
       .head-title{
-        font-family:'Diploma Regular';
+        font-family: 'Open Sans', sans-serif;
         font-weight:normal;
         font-size:50px;
         text-align: center;
-        color: #fc0405;
+        color: #10A1D8;
       }
 
-      .head-sub{
+      .text-main{
+          font-family: 'Prata', serif;
+          font-size: 12px;
+          text-align: center;
+      }
+
+     /** .head-sub{
         text-align: center;
         font-family: 'Abril Fatface', cursive;
         font-size: 25px;
+      }**/
+
+      .enter{
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        padding: 5px;
+      }
+
+      .enter:focus{
+        border-bottom: solid #10A1D8;
+        border-bottom-width: 2px;
       }
 
       .wrapper{
@@ -58,18 +74,55 @@
         bottom: 10px;
         text-align: center;
         width: 100%;
-        font-size: 10px;
+        font-size: 8px;
       }
+
+      ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-family: 'Prata', serif;
+        font-size: 12px;
+      }
+
+      button{
+        border:none;
+        font-family: 'Open Sans', sans-serif;
+        background-color: #FFF;
+        color: #10A1D8;
+        border: 2px solid #10A1D8;
+        -webkit-transition-duration: 0.4s; 
+        transition-duration: 0.4s;
+      }
+      
+      a{
+        text-decoration: none;
+      }
+
+      button:hover {
+        background-color: #10A1D8; 
+        color: #FFF;
+      }
+
+      input{
+        font-family: 'Prata', serif;
+        font-size: 12px;
+      }
+
+      input:focus {
+        outline:none;
+}
     </style>
-    <script src="popup.js"></script>
   </head>
 
   <body class="myhead">
-      <div class = "head-title">4senal</div>
-      <div class = "head-sub">Go ahead and improve your browsing experience</div><br>
-      <div class="wrapper"><button class="btn" id="act_btn">Activate</button></div>
-      <div class="footer">©Developed by Ribhu Lahiri</div>
+      <div class = "head-title">Osmote</div>
+      <div class="text-main">
+      <br>
+      <input type="text" class="enter" placeholder="Text to Replace: " id="txt1"><br>
+      <input type="text" class="enter" placeholder="To be replaced with: " id="txt2"><br>
+      <br>
+      </div>
+      <div class="wrapper"><button type="button" class="btn" id="button" >Activate</button></div>
+      <div class="footer">©<a target= "_blank" href="http://ribhulahiri.com">Ribhu Lahiri</a></div>
   </body>
-
+    <script type="text/javascript" src="content-1.js"></script>
 </html>
 
